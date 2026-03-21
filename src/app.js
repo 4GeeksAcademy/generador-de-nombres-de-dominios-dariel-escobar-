@@ -7,5 +7,35 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'racoon'];
+let extensions = ['.com', '.net', '.us', '.io'];
+
+
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let k = 0; k < noun.length; k++) {
+      for (let l = 0; l < extensions.length; l++) {
+        console.log(pronoun[i] + adj[j] + noun[k] + extensions[l]);
+      }
+    }
+  }
+}
+
+
+for (let i = 0; i < pronoun.length; i++) {
+  for (let j = 0; j < adj.length; j++) {
+    for (let k = 0; k < noun.length; k++) {
+      let word = pronoun[i] + adj[j] + noun[k];
+
+      
+      if (word.endsWith("es")) {
+        console.log(word.slice(0, -2) + ".es");
+      }
+    }
+  }
+}
   console.log("Hello Rigo from the console!");
 };
